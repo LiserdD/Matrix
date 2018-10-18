@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Calc</title>
+	<style>
+		
+	</style>
+	<link rel="stylesheet" href="style.css" type="text/css">
+	<link rel="shortcut icon" href="images/calc.png" type="image/x-icon">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>	
+	<div id="particles-js"></div>
+	<header class="head"></header>
+	<div id="menu">
+		<!--<div class="actH" id="pCalc">Калькуляторы:</div> -->		
+		<a class="menu-item" href="index.html" >Умножение матриц</a><br>
+		<a class="menu-item" href="sum.html">Cложение и вычитание матриц</a><br>
+		<a class="menu-item" href="Multinumb.html">Умножение матрицы на число</a><br>
+		<a class="menu-item" href="Pow.html">Возведение матрицы в степень</a><br>
+		<a class="menu-item" href="det.html">Определитель(детерминант) матрицы</a><br>
+		<a class="menu-item" href="obr.html">Обратная матрица</a><br>
+	</div>
+	
+	<div class="choseAct-field" id="one">
+		<div id="choseAct-button_cont">
+			<div class="choseAct-button" data-bttn="1">Калькулятор</div>
+			<div class="choseAct-button" data-bttn="2">Инструкция</div>
+			<div class="choseAct-button" data-bttn="3">Теория</div>
+		</div>
+
+		<div class="actField">
+			<div class="actField-container">
+				<div class="actH">Умножение матриц:</div>
+				<div class="p1">Введите размер первой матрицы:</div>
+				<select class="matrixSize" id="matr1-rows">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3" selected>3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+				</select>
+				<span>X</span>
+				<select class="matrixSize" id="matr1-collums">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3" selected>3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+				</select><br>
+				<div class="p1">Введите размер второй матрицы:</div>
+				<select class="matrixSize" id="matr2-rows">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3"selected>3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+				</select>
+				<span>X</span>
+				<select class="matrixSize"  id="matr2-collums">
+					<option value="1">1</option>
+					<option value="2" >2</option>
+					<option value="3"selected>3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+				</select>
+				<div class="p2" id="p2-margin">Заполните матрицы:</div>
+				<div class="matrix"> Первая матрица:
+					<div id="matr1"></div>
+				</div>
+				<div class="matrix"> Вторая матрица:
+					<div id="matr2"></div>
+				</div>
+
+				<div class="matrixGr-bttn" id="rezBttn">=</div>
+				<div class="p2">Полученая матрица:</div>
+				<div id="result-container">
+					<div class="res-border">
+						<div id="result"></div>
+					</div>
+				</div>
+			</div>
+			<div class="actField-container">
+				<div class="h4">Правила ввода чисел:</div>	
+				<div class="prim-fon"><b>Целые числа:</b><br><em>Например:</em> 2; 0; -6.</div>
+				<div class="prim-fon"><b>Десятичные дроби:</b> вводятся через точку или запятую в зависимости от настроек вашей операционной системы. Если вы ввели десятичную дробь и программа выдала сообщение "Можно вводить только числа!" попробуйте заменить разделительный знак "." на "," или наоборот. <br>
+				<em>Например:</em> 1.2; -0.4 (или 1,2; -0,4)</div>
+				<div class="prim-fon"><b>Дробные числа (-):</b> вводятся через "/". <br><em>Например:</em> 1/2; -3/4 ; 8/3.</div>
+				<div class="prim-fon"><b>Символы (-):</b> Скобки, буквы, операции сложения, вычитания, умножения, возведения в степень и прочее<b> не поддерживаются!</b> </div>
+				<div class="prim-fon"><b>Некоректно заполненые поля подсвечиваются красным цветом.</b></div>	
+			</div>
+			<div class="actField-container">
+				<div class="h4">Умножение матриц. Теория:</div>
+				<div class="prim-fon">
+					<p><i><b>Определение: </b></i>Результатом умножения матрицы <b>A<sub><i>m×n</i></sub></b> на матрицу <b>B<sub><i>n×k</i></sub></b> будет матрица <b>C<sub><i>m×k</i></sub></b> такая, что элемент матрицы <b>C</b>, стоящий в <i>i</i>-той строке и <i>j</i>-том столбце (c<sub><i>ij</i></sub>), равен сумме произведений элементов <i>i</i>-той строки матрицы <b>A</b> на соответствующие элементы <i>j</i>-того столбца матрицы <b>B</b>.</p></div>
+				<div class="prim-fon">
+				<p><i><b>Замечание: </b></i> Две матрицы можно перемножить если количество столбцов первой матрицы равно количеству строк второй матрицы.</p>
+				</div>
+
+				<div class="prim-fon">
+				 <i><b>Пример 1:</b></i> Найти матрицу C равную произведению матриц: <br> 
+					<div class="prim-mtr">
+						A = 
+						<div class="duz-cont">
+							<div>
+								<span>4</span><span>2</span><br><span>9</span><span>0</span><br>
+							</div>
+						</div>
+						и B = 
+						<div class="duz-cont">
+							<div>
+								<span>3</span><span>1</span><br><span>-3</span><span>4</span><br>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="prim-fon">
+					<div class="prim-mtr">
+						<i><b>Решение: </b></i>
+					</div>
+					<div class="prim-mtr">
+						<p> C = A · B = </p>
+						<div class="duz-cont">
+							<div>
+								<span>4</span><span>2</span><br><span>9</span><span>0</span><br>
+							</div>
+						</div>
+						<span>·</span>
+						<div class="duz-cont">
+							<div>
+								<span>3</span><span>1</span><br><span>-3</span><span>4</span><br>
+							</div>
+						</div>
+						<span>=</span>
+						<div class="duz-cont">
+							<div>
+								<span>6</span><span>12</span><br><span>27</span><span>9</span><br>
+							</div>
+						</div>
+					</div>
+					<p>Элементы матрицы <b>C</b> вычисляются следующим образом:</p> 
+					<p class="formul"><i>c<sub>11</sub> = a<sub>11</sub>·b<sub>11</sub> + a<sub>12</sub>·b<sub>21</sub> = 4·3 + 2·(-3) = 12 - 6 = 6</i></p>
+					<p class="formul"><i>c<sub>12</sub> = a<sub>11</sub>·b<sub>12</sub> + a<sub>12</sub>·b<sub>22</sub> = 4·1 + 2·4 = 4 + 8 = 12</i></p>
+					<p class="formul"><i>c<sub>21</sub> = a<sub>21</sub>·b<sub>11</sub> + a<sub>22</sub>·b<sub>21</sub> = 9·3 + 0·(-3) = 27 + 0 = 27</i></p>
+					<p class="formul"><i>c<sub>22</sub> = a<sub>21</sub>·b<sub>12</sub> + a<sub>22</sub>·b<sub>22</sub> = 9·1 + 0·4 = 9 + 0 = 9</i></p>
+					</div>
+				
+			</div>
+		</div>
+	</div>	
+	<footer></footer>
+
+	<script src="jquery.js"></script>
+	<script src="fade.js"></script>
+	<script src="main.js"></script>
+	<script src='https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js'></script>
+    <script src='https://threejs.org/examples/js/libs/stats.min.js'></script>
+
+    <script  src="js/index.js"></script>
+</body>
+</html>

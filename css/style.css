@@ -1,0 +1,16 @@
+/* ---- reset ---- */
+
+body {
+  margin: 0;
+  font:normal  Helvetica, sans-serif;
+}
+
+canvas {
+  display: block;
+  vertical-align: bottom;
+}
+
+/* ---- particles.js container ---- */
+
+
+

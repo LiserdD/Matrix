@@ -1,0 +1,367 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	font-family: Helvetica;
+}
+option:checked {
+	box-shadow: 0 0 10px 100px orange inset;
+}
+a{
+	display: block;
+	text-decoration: none;
+}
+p{
+	line-height: 25px;
+}
+ul{
+	line-height: 23px;
+}
+input{
+	margin: 2px;
+	width: 65px;
+	font-size: 18px;
+	height: 25px;
+	font-weight: 700;
+	background-color: #9EA1A1;
+	border: 2px solid #030303;
+	border-radius: 4px;
+	text-align: center;
+	outline: none;
+}
+select{
+	background-color: #6D6D6D;
+	border: 2px solid #262626;
+	border-radius: 4px;
+	font-weight: 700;
+	outline: none;
+}
+select option:hover {
+    background-color: yellow;
+}
+header{
+	margin: 0 auto;
+	position: relative;
+	background-image: url("images/fon.png");
+	max-width: 990px;
+	min-height: 300px;
+	z-index: 999999999;
+}
+#particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(220, 220, 220, 1);
+  background-image: url("");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  z-index: 1;
+}
+#menu{
+	margin: 0 auto;
+	max-width: 950px;
+	position: relative;
+	background-color: rgb(161,163,163,0.1);
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	z-index: 2;
+}
+.menu-item{
+	margin: 10px 3px 0 3px;
+	padding: 8px;
+	color: #E2E2E2;
+	font-weight: 700;
+	display: inline-block;
+	background-color: #121212;
+	border-radius: 20px 5px 20px 5px;
+	cursor: pointer;
+	
+	
+}
+.menu-item:hover{
+	padding: 5px;
+	background-color: rgba(220, 220, 220, 0.5);
+	border: 3px solid #121212;
+	color: black;
+	border-radius: 5px 20px 5px 20px;
+	transition: background-color 1s, border-radius 1s, color 1s;
+	
+}
+
+/*#menu{
+	position: fixed;
+	top: 50%;
+	left: 5px;
+	background-color: rgb(161,163,163,0.1);
+	z-index: 2;
+}
+.menu-item{
+	margin: 3px 0 3px 0;
+	padding: 8px;
+	color: #E2E2E2;
+	font-weight: 700;
+	display: inline-block;
+	background-color: #121212;
+	border-radius: 15px 0 15px 0;
+	cursor: pointer;
+	
+}
+.menu-item:hover{
+	background-color: #3E3E3E;
+	color: white;
+}*/
+.choseAct-field{
+	margin: 70px auto 100px auto;
+	padding: 50px;
+	position: relative;
+	max-width: 800px;
+	background-color: #191919;
+	border: 2px solid #191919;
+	border-radius: 0 150px 10px 150px;
+	z-index: 2;
+
+	
+}
+.actField{
+	margin: 0px auto 0 auto;
+	padding: 0px 40px 40px 40px;
+	position: relative;
+	background-color: #D5D5D5;
+	max-width: 700px;
+	min-height: 400px;
+	border: 1px solid #CACACA;
+	border-radius: 20px;
+	border-radius: 0 100px 10px 100px;
+
+}
+.actField-container{
+	padding: 10px;
+	
+}
+#choseAct-button_cont{
+	position: absolute;
+	top:-30px;
+	left: -2px;
+	display: flex;
+
+}
+.choseAct-button{
+	padding: 4px;
+	background-color: #D4D4D4;
+	color: black;
+	font-size: 16px;
+	font-weight: 700;
+	border-top: 2px solid #191919;
+	border-right: 2px solid #191919;
+	border-left: 2px solid #191919;
+	border-radius: 10px 10px 0 0;
+	cursor: pointer;	
+}
+.choseAct-button:first-child{
+	background-color: #191919;
+	color: #C9C9C9;
+}
+.actH{
+	margin-bottom: 40px;
+	border-radius: 20px 20px 0 20px;
+	font-size: 30px;
+	font-weight: 700;
+	text-align: center;
+}
+#pCalc{
+	margin-bottom: 10px;
+}
+.h4{
+	font-weight: 700;
+	font-size: 20px;
+}
+.p1{
+	font-size: 17px;
+	font-weight: 700;
+}
+.p2{
+	font-size: 19px;
+	font-weight: 700;
+	text-align: center;
+}
+#p2-margin{
+	margin-top: 50px;
+}
+.matrixSize{
+	margin: 10px;
+	width: 70px;
+	height: 30px;
+	font-size: 17px;
+}
+.matrixGr-bttn{
+	margin: 5px 0 40px 5px;
+	width: 75px;
+	height: 35px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #C2C4D0;
+	color: black;
+	font-weight: 700;
+	font-size: 16px;
+	cursor: pointer;
+	border: 2px solid #252525;
+	border-radius: 5px;
+}
+.matrixGr-bttn:hover{
+	background-color: #252525;
+	color: #D8D8D8;
+	border: 2px solid #D8D8D8;
+}
+#rezBttn{
+	margin: 10px auto 20px auto;
+	height: 30px;
+	width: 55px;
+	font-size: 40px;
+	font-weight: 400;
+}
+.matrix{ 
+	margin: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+	font-size: 15px;
+	font-weight: 700;
+	background-color: #535353;
+	border-radius: 20px;
+}
+#matr1{
+	margin: 10px 0  10px 0;
+	border-left: 2px solid black;
+	border-right: 2px solid black;
+	border-radius: 8px;
+}
+#matr2{
+	margin: 10px 0  10px 0;
+	border-left: 2px solid black;
+	border-right: 2px solid black;
+	border-radius: 8px;
+}
+#result-container{
+	margin: 10px auto 30px auto;
+	padding: 7px 0;
+	min-height: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	background-color: #949292;
+	border-radius: 20px;
+}
+.res-border{
+	border-left: 2px solid black;
+	border-right: 2px solid black;
+	border-radius: 8px;
+}
+#result{
+	padding: 3px;
+	font-size: 20px;
+	font-weight: 700px;
+	display: flex;
+	
+}
+.result-item{
+	display: inline-block;
+	margin: 1px 1px;
+	padding: 0 10px;
+	background-color: #C3C2C2;
+	border: 2px solid #323232;
+	border-radius: 5px;
+}
+
+footer{
+	position: relative;
+	margin: 100px 0;
+	min-height: 300px;
+	background-color: #161616;
+	z-index: 200;
+}
+
+
+
+.actH::selection {
+    color: #CC1717; 
+    background: #000; 
+}
+.menu-item::selection {
+    color: #E61FDF; 
+    background: #000; 
+}
+strong::selection {
+    color: #281FE6; 
+    background: #000; 
+}
+.choseAct-button::selection {
+    color: #1FCCE6; 
+    background: #000; 
+}
+.p1::selection {
+    color: #0CE32F; 
+    background: #000; 
+}
+.p2::selection {
+    color: #8AE30C; 
+    background: #000; 
+}
+li::selection {
+    color: #E3E00C; 
+    background: #000; 
+}
+.matrix::selection {
+    color: #E39A0C; 
+    background: #000; 
+}
+input::selection {
+    color: #DBDAD8; 
+    background: #000; 
+}
+
+.duz-cont{
+	margin: 0 5px;
+	display: inline-block;
+}
+.duz-cont div{
+	padding: 0 4px;
+	border-left: 2px solid black;
+	border-right: 2px solid black;
+	border-radius: 8px;
+}
+.duz-cont span{
+	margin: 4px;
+	font-size: 18px;
+}
+.prim-mtr{
+	margin: 10px 0;
+	font-size: 18px;
+	display: flex;
+	align-items:center;
+}
+.formul{
+	font-size: 18px;
+}
+.prim-fon{
+	margin: 15px 0;
+	padding: 8px;
+	background-color: #E9E9E9;
+	border-radius: 20px;
+}
+
+
+@media screen and (max-width: 900px) {
+	#particles-js{
+		display: none;
+	}
+	body{
+		 background-color: rgba(220, 220, 220, 1);
+	}
+}

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Multinumb</title>
+	<style>
+		
+	</style>
+	<link rel="stylesheet" href="style.css" type="text/css">
+	<link rel="shortcut icon" href="images/calc.png" type="image/x-icon">
+</head>
+<body>	
+	<div id="particles-js"></div>
+	<header class="head"></header>
+	<div id="menu">
+		<!--<div class="actH" id="pCalc">Калькуляторы:</div> -->		
+		<a class="menu-item" href="index.html" >Умножение матриц</a><br>
+		<a class="menu-item" href="sum.html">Cложение и вычитание матриц</a><br>
+		<a class="menu-item" href="Multinumb.html">Умножение матрицы на число</a><br>
+		<a class="menu-item" href="Pow.html">Возведение матрицы в степень</a><br>
+		<a class="menu-item" href="det.html">Определитель(детерминант) матрицы</a><br>
+		<a class="menu-item" href="obr.html">Обратная матрица</a><br>
+
+	</div>
+	
+	<div class="choseAct-field" id="one">
+		<div id="choseAct-button_cont">
+			<div class="choseAct-button" data-bttn="1">Калькулятор</div>
+			<div class="choseAct-button" data-bttn="2">Инструкция</div>
+			<div class="choseAct-button" data-bttn="3">Теория</div>
+		</div>
+
+		<div class="actField">
+			<div class="actField-container">
+				<div class="actH">Умножение матрицы на число:</div>
+				<div class="p1">Введите размер матрицы:</div>
+				<select class="matrixSize" id="matr1-rows">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3" selected>3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+				</select>
+				<span>X</span>
+				<select class="matrixSize" id="matr1-collums">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3" selected>3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+				</select><br>
+
+				<div class="p1">Введите число:</div>
+				<input type="text" maxlength="6" class="matrInp" id="mltnumber">
+
+				<div class="p2" id="p2-margin">Заполните матрицу:</div>
+				<div class="matrix"> Первая матрица:
+					<div id="matr1"></div>
+				</div>
+
+				<div class="matrixGr-bttn" id="rezBttn">=</div>
+				<div class="p2">Полученая матрица:</div>
+				<div id="result-container">
+					<div class="res-border">
+						<div id="result"></div>
+					</div>
+				</div>
+			</div>
+			<div class="actField-container">
+				<p>
+					<strong style="font-size: 20px;">Правила ввода чисел:</strong>
+					<ul>
+						<li><strong>Целые числа:</strong><br><em>Например:</em> 2; 0; -6.</li>
+						<li><strong>Десятичные дроби:</strong> вводятся через точку или запятую в зависимости от настроек вашей операционной системы. Если вы ввели десятичную дробь и программа выдала сообщение "Можно вводить только числа!" попробуйте заменить разделительный знак "." на "," или наоборот. <br>
+						<em>Например:</em> 1.2; -0.4 (или 1,2; -0,4)</li>
+						<li><strong>Дробные числа (-):</strong> вводятся через "/". <br><em>Например:</em> 1/2; -3/4 ; 8/3.</li>
+						<li><strong>Символы (-):</strong> Скобки, буквы, операции сложения, вычитания, умножения, возведения в степень и прочее<strong> не поддерживаются!</strong> </li>
+					</ul> <br>
+					<strong>Некоректно заполненые поля подсвечиваются красным цветом.</strong>
+				</p>
+				
+			</div>
+			<div class="actField-container">
+				<div class="h4">Умножение матрицы на число. Теория:</div>
+				<div class="prim-fon">
+					<p><i><b>Определение: </b></i>Произведением матрицы <b>A</b> на число <b>k</b> называется матрица <b>B = k · A</b> того же размера, полученная из исходной умножением на заданное число всех ее элементов:
+					<p style="font-size: 20px; text-align: center;"><i>b<sub>ij</sub> = k · a<sub>ij</sub></i></p></div>
+				<div class="prim-fon">
+				 <i><b>Пример 1:</b></i> Найти произвидение матрицы: <br> 
+					<div class="prim-mtr">
+						A = 
+						<div class="duz-cont">
+							<div>
+								<span>4</span><span>2</span><br><span>9</span><span>0</span><br>
+							</div>
+						</div>
+						и числа 5			
+					</div>
+					</div>
+					<div class="prim-fon">
+						<div class="prim-mtr">
+							<i><b>Решение: </b></i>
+						</div>
+						<div class="prim-mtr">
+							<p> C = A + B = </p>
+							<div class="duz-cont">
+								<div>
+									<span>4</span><span>2</span><br><span>9</span><span>0</span><br>
+								</div>
+							</div>
+							<span>· 5 =</span>
+							<div class="duz-cont">
+								<div>
+									<span>4·5</span><span>2·5</span><br><span>9·5</span><span>0·5</span><br>
+								</div>
+							</div>
+							<span>=</span>
+							<div class="duz-cont">
+								<div>
+									<span>20</span><span>10</span><br><span>45</span><span>0</span><br>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer></footer>	
+
+
+	<script src="jquery.js"></script>
+	<script src="fade.js"></script>
+	<script src="Multinumb.js"></script>
+
+	<script src='https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js'></script>
+    <script src='https://threejs.org/examples/js/libs/stats.min.js'></script>
+
+    <script  src="js/index.js"></script>
+</body>
+</html>

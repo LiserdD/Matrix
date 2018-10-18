@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Pow</title>
+	<style>
+		
+	</style>
+	<link rel="stylesheet" href="style.css" type="text/css">
+	<link rel="shortcut icon" href="images/calc.png" type="image/x-icon">
+</head>
+<body>	
+	<div id="particles-js"></div>
+	<header class="head"></header>
+	<div id="menu">
+		<!--<div class="actH" id="pCalc">Калькуляторы:</div> -->		
+		<a class="menu-item" href="index.html" >Умножение матриц</a><br>
+		<a class="menu-item" href="sum.html">Cложение и вычитание матриц</a><br>
+		<a class="menu-item" href="Multinumb.html">Умножение матрицы на число</a><br>
+		<a class="menu-item" href="Pow.html">Возведение матрицы в степень</a><br>
+		<a class="menu-item" href="det.html">Определитель(детерминант) матрицы</a><br>
+		<a class="menu-item" href="obr.html">Обратная матрица</a><br>
+	</div>
+	<div class="choseAct-field">
+		<div id="choseAct-button_cont">
+			<div class="choseAct-button" data-bttn="1">Калькулятор</div>
+			<div class="choseAct-button" data-bttn="2">Инструкция</div>
+			<div class="choseAct-button" data-bttn="3">Теория</div>
+		</div>
+
+		<div class="actField">
+			<div class="actField-container">
+				<div class="actH">Возведение матрицы в степень:</div>
+				<div class="p1">Введите размер матрицы:</div>
+				<select class="matrixSize" id="length">
+					<option value="1">1x1</option>
+					<option value="2">2x2</option>
+					<option value="3" selected>3x3</option>
+					<option value="4">4x4</option>
+					<option value="5">5x5</option>
+					<option value="6">6x6</option>
+				</select>
+
+				<div class="p1">Введите степень:</div>
+				<input type="text" maxlength="6" class="matrInp" id="mltnumber">
+
+				<div class="p2" id="p2-margin">Заполните матрицу:</div>
+				<div class="matrix">Матрица:
+					<div id="matr1"></div>
+				</div>
+
+				<div class="matrixGr-bttn" id="rezBttn">=</div>
+				<div class="p2">Полученая матрица:</div>
+				<div id="result-container">
+					<div class="res-border">
+						<div id="result"></div>
+					</div>
+				</div>
+			</div>
+			<div class="actField-container">
+				<p>
+					<strong style="font-size: 20px;">Правила ввода чисел:</strong>
+					<ul>
+						<li><strong>Целые числа:</strong><br><em>Например:</em> 2; 0; -6.</li>
+						<li><strong>Десятичные дроби:</strong> вводятся через точку или запятую в зависимости от настроек вашей операционной системы. Если вы ввели десятичную дробь и программа выдала сообщение "Можно вводить только числа!" попробуйте заменить разделительный знак "." на "," или наоборот. <br>
+						<em>Например:</em> 1.2; -0.4 (или 1,2; -0,4)</li>
+						<li><strong>Дробные числа (-):</strong> вводятся через "/". <br><em>Например:</em> 1/2; -3/4 ; 8/3.</li>
+						<li><strong>Символы (-):</strong> Скобки, буквы, операции сложения, вычитания, умножения, возведения в степень и прочее<strong> не поддерживаются!</strong> </li>
+					</ul> <br>
+					<strong>Некоректно заполненые поля подсвечиваются красным цветом.</strong>
+				</p>
+				
+			</div>
+			<div class="actField-container">
+				<div class="h4">Возведение матрицы в степень. Теория:</div>
+				<div class="prim-fon">
+					<p><i><b>Определение: </b></i>Результатом <b>возведения матрицы в степень</b>, будет матрица равная произведению самой на себя соответствующее количество раз.</p>
+				</div>
+				<div class="prim-fon">
+					<p>Возводить в степень можно только квадратные матрицы (матрицы у которых количество строк равно количеству столбцев).</p>
+				</div>
+					
+			</div>
+		</div>
+	</div>	
+	
+	<footer></footer>
+
+
+	<script src="jquery.js"></script>
+	<script src="fade.js"></script>
+	<script src="Pow.js"></script>
+	
+	<script src='https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js'></script>
+    <script src='https://threejs.org/examples/js/libs/stats.min.js'></script>
+
+    <script  src="js/index.js"></script>
+</body>
+</html>

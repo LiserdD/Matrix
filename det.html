@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Determinant</title>
+	<style>
+		
+	</style>
+	<link rel="stylesheet" href="style.css" type="text/css">
+	<link rel="shortcut icon" href="images/calc.png" type="image/x-icon">
+</head>
+<body>	
+	<div id="particles-js"></div>
+	<header class="head"></header>
+	<div id="menu">
+		<!--<div class="actH" id="pCalc">Калькуляторы:</div> -->		
+		<a class="menu-item" href="index.html" >Умножение матриц</a><br>
+		<a class="menu-item" href="sum.html">Cложение и вычитание матриц</a><br>
+		<a class="menu-item" href="Multinumb.html">Умножение матрицы на число</a><br>
+		<a class="menu-item" href="Pow.html">Возведение матрицы в степень</a><br>
+		<a class="menu-item" href="det.html">Определитель(детерминант) матрицы</a><br>
+		<a class="menu-item" href="obr.html">Обратная матрица</a><br>
+
+	</div>
+	<div class="choseAct-field" id="one">
+		<div id="choseAct-button_cont">
+			<div class="choseAct-button" data-bttn="1">Калькулятор</div>
+			<div class="choseAct-button" data-bttn="2">Инструкция</div>
+			<div class="choseAct-button" data-bttn="3">Теория</div>
+		</div>
+
+		<div class="actField">
+			<div class="actField-container">
+				<div class="actH">Определитель матрицы. Детерминант матрицы:</div>
+				<div class="p1">Введите размер матрицы:</div>
+				<select class="matrixSize" id="size">
+					<option value="1">1x1</option>
+					<option value="2">2x2</option>
+					<option value="3" selected>3x3</option>
+					<option value="4">4x4</option>
+					<option value="5">5x5</option>
+					<option value="6">6x6</option>
+				</select>
+			
+				<div class="p2" id="p2-margin">Заполните матрицу:</div>
+				<div class="matrix">Mатрица:
+					<div id="matr1"></div>
+				</div>
+
+				<div class="matrixGr-bttn" id="rezBttn">=</div>
+				<div class="p2">Детерминант равен:</div>
+				<div id="result-container">	
+						<div id="result"></div>
+				</div>
+			</div>
+			<div class="actField-container">
+				<p>
+					<strong style="font-size: 20px;">Правила ввода чисел:</strong>
+					<ul>
+						<li><strong>Целые числа:</strong><br><em>Например:</em> 2; 0; -6.</li>
+						<li><strong>Десятичные дроби:</strong> вводятся через точку или запятую в зависимости от настроек вашей операционной системы. Если вы ввели десятичную дробь и программа выдала сообщение "Можно вводить только числа!" попробуйте заменить разделительный знак "." на "," или наоборот. <br>
+						<em>Например:</em> 1.2; -0.4 (или 1,2; -0,4)</li>
+						<li><strong>Дробные числа (-):</strong> вводятся через "/". <br><em>Например:</em> 1/2; -3/4 ; 8/3.</li>
+						<li><strong>Символы (-):</strong> Скобки, буквы, операции сложения, вычитания, умножения, возведения в степень и прочее<strong> не поддерживаются!</strong> </li>
+					</ul> <br>
+					<strong>Некоректно заполненые поля подсвечиваются красным цветом.</strong>
+				</p>
+				
+			</div>
+			<div class="actField-container">
+				<div class="h4">Определитель (детерминант) матрицы. Теория:</div>
+				<div class="prim-fon">
+					<p><i><b>Определение: </b></i> Для матрицы <b>2×2</b> значение определителя равно разности произведений элементов главной и побочной диагоналей:</p>
+					<div class="prim-mtr">
+						∆ = 
+						<div class="duz-cont">
+							<div>
+								<span>a<sub>11</sub></span><span>a <sub>12</sub></span><br><span>a <sub>21</sub></span><span>a <sub>22</sub></span><br>
+							</div>
+						</div>
+						<span>= a<sub>11</sub> · a <sub>22</sub> - a <sub>12</sub> · a <sub>21</sub></span></span>			
+					</div>
+				</div>
+				<div class="prim-fon">
+					<p><i><b>Определение: </b></i> Для матрицы <b>3×3</b> значение определителя равно сумме произведений элементов главной диагонали и произведений элементов лежащих на треугольниках с гранью параллельной главной диагонали, от которой вычитается произведение элементов побочной диагонали и произведение элементов лежащих на треугольниках с гранью параллельной побочной диагонали.</p>
+					<div class="prim-mtr">
+						∆ = 
+						<div class="duz-cont">
+							<div>
+							
+								<footer></footer>	<span>a<sub>11</sub></span><span>a<sub>12</sub></span>a<sub>13</sub></span><br><span>a<sub>21</sub></span><span>a<sub>22</sub></span>a<sub>23</sub></span><br><span>a<sub>31</sub></span><span>a<sub>32</sub></span><span>a<sub>33</sub></span>
+							</div>
+						</div>
+						<span>= <i>a<sub>11</sub>·a<sub>22</sub>·a<sub>33</sub> + a<sub>12</sub>·a<sub>23</sub>·a<sub>31</sub>+ <br> + a<sub>13</sub>·a<sub>21</sub>·a<sub>32</sub> -a<sub>13</sub>·a<sub>22</sub>·a<sub>31</sub> - <br> - a<sub>11</sub>·a<sub>23</sub>·a<sub>32</sub> - a<sub>12</sub>·a<sub>21</sub>·a<sub>33</sub></i></span>			
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>	
+
+	<footer></footer>
+
+	<script src="jquery.js"></script>
+	<script src="fade.js"></script>
+	<script src="det.js"></script>
+
+
+	<script src='https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js'></script>
+    <script src='https://threejs.org/examples/js/libs/stats.min.js'></script>
+
+    <script  src="js/index.js"></script>
+</body>
+</html>
